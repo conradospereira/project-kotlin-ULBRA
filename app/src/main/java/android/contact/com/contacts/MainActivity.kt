@@ -25,7 +25,6 @@ class MainActivity : Activity() {
         exibir_campo?.setOnClickListener{
             if (container_endereco?.visibility == View.VISIBLE) {
                 container_endereco?.visibility = View.GONE
-                mudar_texto?.text.
 
             } else {
                 container_endereco?.visibility = View.VISIBLE
