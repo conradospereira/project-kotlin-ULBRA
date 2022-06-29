@@ -21,7 +21,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/botao_fechar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -31,7 +31,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/botao_salvar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -51,7 +51,7 @@
                 android:textSize="24dp" />
 
             <LinearLayout
-                android:id="@+id/primeiro_nome"
+                android:id="@+id/layout_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -71,12 +71,13 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/primeiro_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
 
             <LinearLayout
-                android:id="@+id/sobrenome"
+                android:id="@+id/layout_sobrenome"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -97,6 +98,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/sobrenome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -122,6 +124,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/nome_empresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -174,6 +177,7 @@
                     android:textSize="14dp" />
 
                 <EditText
+                    android:id="@+id/logradouro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp" />
@@ -185,7 +189,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/Number"
+                        android:id="@+id/number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -195,7 +199,7 @@
                         android:textSize="14dp" />
 
                     <TextView
-                        android:id="@+id/Complemento"
+                        android:id="@+id/Complement"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -213,12 +217,14 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/numero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/complemento"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
@@ -233,6 +239,7 @@
                     android:textSize="14dp" />
 
                 <EditText
+                    android:id="@+id/bairro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp" />
@@ -244,6 +251,7 @@
                     android:textSize="14dp" />
 
                 <EditText
+                    android:id="@+id/cidade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp" />
@@ -282,12 +290,14 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/cep"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
                         android:layout_weight="1" />
 
                     <EditText
+                        android:id="@+id/uf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
@@ -324,6 +334,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:id="@+id/telefone_profissional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -335,6 +346,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:id="@+id/telefone_pessoal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -366,6 +378,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:id="@+id/email_profissional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -377,6 +390,7 @@
                 android:textSize="14dp" />
 
             <EditText
+                android:id="@+id/email_pessoal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
@@ -402,6 +416,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/observacoes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp" />
