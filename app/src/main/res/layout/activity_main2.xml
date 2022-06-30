@@ -1,81 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <ListView
+    <LinearLayout
+        android:id="@+id/layout_search"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/layout_search"
+            android:id="@+id/layout_top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/layout_top"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="Meus Contatos"
+                android:textSize="50dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Meus Contatos"
-                    android:textSize="50dp"/>
-
-               <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pesquisar"
-                    android:textSize="35dp"/>
-
-            </LinearLayout>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp" />
-
-            <LinearLayout
-                android:id="@+id/layou_names"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="Pesquisar"
+                android:textSize="35dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Buscar"
-                    android:textSize="25dp"
-                    android:layout_marginBottom="25dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Murilo"
-                    android:textSize="25dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="João Marcelo"
-                    android:textSize="25dp"/>
+        <LinearLayout
+            android:id="@+id/layou_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Conrado"
-                    android:textSize="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar"
+                android:textSize="25dp"
+                android:layout_marginBottom="25dp"/>
 
-            </LinearLayout>
 
 
         </LinearLayout>
-    </ListView>
+
+        <ListView
+            android:id="@+id/minha_lista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
