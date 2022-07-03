@@ -1,8 +1,8 @@
 package android.contact.com.contacts
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 
 class MainActivity2 : AppCompatActivity() {
@@ -20,8 +20,7 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
     }
-
-    override fun onResume() {
-        super.onResume()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//    }
 }

@@ -6,7 +6,8 @@ import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import org.w3c.dom.Text
+import android.widget.Toast
+import androidx.room.Room
 
 class MainActivity : Activity() {
 
@@ -31,12 +32,14 @@ class MainActivity : Activity() {
     var salvarBotao: TextView? = null
     var excluirBotao: TextView? = null
     var fecharBotao: TextView? = null
+    private var contatoDAO: ContatoDAO? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)
 
-
+        inicializarBanco()
 
         primeiro_nome = findViewById<EditText>(R.id.primeiro_nome)
         sobrenome = findViewById<EditText>(R.id.sobrenome)
@@ -54,10 +57,8 @@ class MainActivity : Activity() {
         observacoes = findViewById(R.id.observacoes)
         salvarBotao = findViewById(R.id.botao_salvar)
         excluirBotao = findViewById(R.id.botao_excluir)
-
         exibir_campo = findViewById(R.id.fechar_abrir)
         mudar_texto = findViewById(R.id.Show)
-
         exibir_campo?.setOnClickListener{
             if (container_endereco?.visibility == View.VISIBLE) {
                 container_endereco?.visibility = View.GONE
@@ -67,20 +68,24 @@ class MainActivity : Activity() {
             }
 
         }
-
         salvarBotao?.setOnClickListener {
             inserirContato()
         }
-
         excluirBotao?.setOnClickListener {
             apagarContato()
         }
-
         fecharBotao?.setOnClickListener {
             finish()
         }
     }
+    private fun inicializarBanco() {
+         contatoDAO = Room.databaseBuilder(
+            this,
+            ContatosBanco::class.java,
+            "contato-banco"
+        ).allowMainThreadQueries().build().contatoDao()
 
+    }
     private fun inserirContato() {
         val contato = Contato()
         contato.primeiro_nome = primeiro_nome?.text.toString()
@@ -97,10 +102,17 @@ class MainActivity : Activity() {
         contato.email_profissional = email_profissional?.text.toString()
         contato.email_pessoal = email_pessoal?.text.toString()
         contato.observacoes = observacoes?.text.toString()
+        try {
+            contatoDAO?.inserirContato(contato)
+            Toast.makeText(this, "Contato salvo com sucesso!", Toast.LENGTH_LONG).show()
+        } catch (ex: Exception) {
+            Toast.makeText(this, "Erro ao salvar contato", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun apagarContato() {
         val contato = Contato()
+
 
     }
 }
